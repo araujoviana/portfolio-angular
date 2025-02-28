@@ -1,19 +1,20 @@
-<header class="bg-gradient-to-r from-purple-700 to-gray-800 text-white shadow-lg">
-
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a routerLink="" class="text-2xl font-bold">Portfolio</a>
-        <nav class="hidden md:flex space-x-6">
-            <a routerLink="about" class="hover:text-gray-200 transition">About Me</a>
-            <a routerLink="skills" class="hover:text-gray-200 transition">Skills</a>
-            <a routerLink="projects" class="hover:text-gray-200 transition">Projects</a>
-            <a routerLink="contacts" class="hover:text-gray-200 transition">Contacts</a>
-        </nav>
-
-        <!-- TODO hamburger menu -->
-        <button class="md:hidden p-2 rounded-lg hover:bg-blue-400">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-            </svg>
-        </button>
+<header class="header-blur text-white shadow-lg fixed top-0 left-0 w-full z-50 pb-18">
+    <div class="container mx-auto px-4 py-4 flex justify-center items-center">
+      <a routerLink="" class="text-2xl font-bold mr-8">Portfolio</a>
+      
+      <nav class="hidden md:flex space-x-6 border-2 border-gray-300 rounded-full px-6 py-2">
+        <a routerLink="about" class="hover:text-gray-200 transition">About Me</a>
+        <a routerLink="skills" class="hover:text-gray-200 transition">Skills</a>
+        <a routerLink="projects" class="hover:text-gray-200 transition">Projects</a>
+        <a routerLink="contacts" class="hover:text-gray-200 transition">Contacts</a>
+      </nav>
+  
+      <button class="md:hidden p-2 rounded-lg hover:bg-blue-400">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
     </div>
-</header>
+  </header>
+  
