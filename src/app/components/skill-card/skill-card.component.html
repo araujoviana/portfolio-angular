@@ -1,20 +1,12 @@
 <div class="p-6 bg-white rounded-lg shadow transition-all duration-300 ease-in-out transform hover:scale-105 hover:translate-y-2 hover:shadow-xl hover:shadow-indigo-500/50">
-    <div class="flex items-center">
-      <img src="" alt="Skill icon" class="w-10 h-10" />
-      <h3 class="ml-4 text-xl font-semibold">Skill Name</h3>
-    </div>
+  <div class="flex items-center">
+    <img [ngSrc]="icon" width="50" height="50"  alt="Skill icon" class="w-10 h-10" priority/>
+    <h3 class="ml-4 text-xl font-semibold">{{ name }}</h3>
+  </div>
+  <div class="mt-4">
+    <p class="text-gray-600">{{ description }}</p>
     <div class="mt-4">
-      <p class="text-gray-600">Skill description</p>
-      <div class="mt-4">
-        <img src="" alt="Usage media" class="w-full rounded" />
-      </div>
-    </div>
-    <div class="mt-4">
-      <h4 class="font-medium">Connections:</h4>
-      <ul class="list-disc list-inside">
-        <li>Connection 1</li>
-        <li>Connection 2</li>
-      </ul>
+      <img [ngSrc]="usageMedia" width="640" height="480" alt="Usage media" class="max-w-full h-auto rounded">
     </div>
   </div>
-  
+</div>

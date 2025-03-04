@@ -1,18 +1,7 @@
 <div class="min-h-screen p-8">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
-        <!-- TODO Replace with @for using skill service data -->
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
-        <app-skill-card/>
+        @for (itskill of skills; track $index) {
+            <app-skill-card [name]="itskill.name" [description]="itskill.description" [icon]="itskill.icon" [usageMedia]="itskill.usageMedia" />
+        }
     </div>
 </div>
