@@ -1,4 +1,4 @@
-<div class="min-h-screen p-8">
+<div class="min-h-screen p-8 mt-10">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
         @for (itskill of skills; track $index) {
             <app-skill-card [name]="itskill.name" [description]="itskill.description" [icon]="itskill.icon" [usageMedia]="itskill.usageMedia" />
