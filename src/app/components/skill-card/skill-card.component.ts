@@ -13,6 +13,8 @@ export class SkillCardComponent {
   @Input() icon!: string;
   @Input() usageMedia!: string;
 
+  isImageZoomed: boolean = false;
+
   x: number = 0;
   y: number = 0;
 
@@ -28,4 +30,13 @@ export class SkillCardComponent {
     this.el.nativeElement.style.setProperty('--y', `${this.y}px`);
     console.log(this.x,this.y);
   }
+
+  zoomImage(): void {
+    this.isImageZoomed = true;
+  }
+
+  closeImage(): void {
+    this.isImageZoomed = false;
+  }
+
 }

@@ -149,5 +149,14 @@ export class SkillsService {
     },
   ];
 
+  masonryClass(index: number): string {
+    if (index % 5 === 0) {
+      return "md:row-span-2";
+    } else if (index % 7 === 0) {
+      return "md:row-span-3";
+    }
+    return '';
+  }
+
   constructor() { }
 }

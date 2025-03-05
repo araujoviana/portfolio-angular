@@ -6,9 +6,15 @@
     </div>
     <div class="mt-4">
       <p class="text-white">{{ description }}</p>
-      <div class="mt-4">
-        <img [ngSrc]="usageMedia" width="640" height="480" alt="Usage media" class="max-w-full h-auto rounded">
+      <div class="mt-4 image-container">
+        <img [ngSrc]="usageMedia" width="640" height="480" alt="Usage media" class="max-w-full h-auto rounded cursor-zoom-in" (click)="zoomImage()" />
       </div>
     </div>
   </div>
 </div>
+
+@if (isImageZoomed) {
+  <div class="overlay" (click)="closeImage()">
+    <img [ngSrc]="usageMedia" fill="full" alt="Zoomed Usage Media" class="zoomed-image cursor-zoom-out" />
+  </div>
+}
