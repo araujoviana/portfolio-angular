@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SkillCardComponent } from '../skill-card/skill-card.component';
 import { SkillsService } from '../../services/skills.service';
-import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class SkillsComponent {
   skillsService = inject(SkillsService);
-  skills = this.skillsService.skills; 
+  skills = this.skillsService.skills;
 
 
 }
