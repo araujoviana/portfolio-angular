@@ -1,34 +1,32 @@
 <!-- TODO mudar licença e o resto... -->
-<footer class="bg-gradient-to-t from-purple-700 to-gray-900 text-gray-300 py-8 ">
+<footer class="w-full bottom-0 bg-black text-white py-8 border-t-2 border-white">
 
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <h2 class="text-xl font-bold mb-4">Meu Site</h2>
+          <h2 class="text-xl font-bold mb-4">Portfolio</h2>
           <p class="text-sm">
-            Feito com 💻 e café.  
-            Um projeto open-source para aprender e compartilhar conhecimento.
+            Made with <b>Angular</b> and <b>Tailwind CSS</b>.
           </p>
         </div>
-  
+
         <div>
-          <h3 class="text-lg font-semibold mb-4">Links rápidos</h3>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
           <ul class="space-y-2">
-            <li><a href="#" class="hover:text-purple-400 transition">Início</a></li>
-            <li><a href="#" class="hover:text-purple-400 transition">Sobre</a></li>
-            <li><a href="#" class="hover:text-purple-400 transition">Projetos</a></li>
-            <li><a href="#" class="hover:text-purple-400 transition">Contato</a></li>
+            <li><a routerLink="/" class="hover:text-purple-400 transition">Home</a></li>
+            <li><a routerLink="about" class="hover:text-purple-400 transition">About</a></li>
+            <li><a routerLink="skills" class="hover:text-purple-400 transition">Skills</a></li>
+            <li><a routerLink="projects" class="hover:text-purple-400 transition">Projects</a></li>
+            <li><a routerLink="contacts" class="hover:text-purple-400 transition">Contacts</a></li>
           </ul>
         </div>
-  
+
+        <!-- REVIEW Poderia ter vindo de um serviço -->
         <div>
-          <h3 class="text-lg font-semibold mb-4">Redes sociais</h3>
+          <h3 class="text-lg font-semibold mb-4">Social Media</h3>
           <div class="flex space-x-4">
-            <a href="#" class="hover:text-blue-400 transition">
-              <i class="fab fa-twitter"></i> Twitter
-            </a>
             <a href="#" class="hover:text-pink-500 transition">
-              <i class="fab fa-instagram"></i> Instagram
+              <i class="fab fa-instagram"></i> Github
             </a>
             <a href="#" class="hover:text-blue-600 transition">
               <i class="fab fa-linkedin"></i> LinkedIn
@@ -36,11 +34,10 @@
           </div>
         </div>
       </div>
-  
+
       <div class="text-center mt-8 border-t border-gray-700 pt-4">
-        <p class="text-sm">&copy; 2025 Meu Site. Todos os direitos reservados.</p>
+        <p class="text-sm">&copy; 2025 Portfolio.  <a href="https://opensource.org/licenses/MIT" class="underline">MIT License</a>.</p>
       </div>
     </div>
 
   </footer>
-  
