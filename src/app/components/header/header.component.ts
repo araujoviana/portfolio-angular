@@ -8,5 +8,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  drawerVisible = false;
 
+  toggleDrawer() {
+    console.log(this.drawerVisible);
+    this.drawerVisible = !this.drawerVisible;
+  }
 }

@@ -1,26 +1,34 @@
 .header-blur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: rgba(2, 1, 19, 0.3); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    z-index: 100;
-  }
-  
-  .header-blur::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    height: 100px;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-    pointer-events: none;
-  }
+  position: fixed;
+  height: 50px;
+  background-color: rgba(2, 1, 19, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 100;
+}
+
+.header-blur::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 100px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+}
+
+.drawer-menu {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  pointer-events: none;
+  z-index: 101;
+}
+
+.drawer-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
