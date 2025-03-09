@@ -1,7 +1,13 @@
-<div class="min-h-screen p-8 mt-10">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
-    @for (project of projects; track $index) {
-      <app-project-card [name]="project.name"  [brief]="project.brief" [description]="project.description" [imagePath]="project.imagePath" [relevantLink]="project.relevantLink"  />
-    }
+<div class="p-8 mt-10 ">
+
+  <h1 class="text-3xl font-bold text-white mb-5">Here's what I've built</h1>
+
+  <div class="flex items-center justify-evenly">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+      @for (project of projects; track $index) {
+        <app-project-card [name]="project.name"  [brief]="project.brief" [description]="project.description" [imagePath]="project.imagePath" [relevantLink]="project.relevantLink"  />
+      }
+    </div>
   </div>
+
 </div>

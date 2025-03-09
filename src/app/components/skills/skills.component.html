@@ -1,7 +1,31 @@
-<div class="min-h-screen p-8 mt-10">
+<div class="min-h-screen p-8 mt-10 bg-black text-white">
+
+  <div class="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-4 mb-6">
+    <h1 class="text-3xl font-bold">{{ learningMessage }}</h1>
+
+    <button (click)="displayLearned()"
+            class="border border-white rounded-2xl p-2 hover:bg-white hover:text-black focus:outline-none focus:ring-2 focus:ring-white">
+      {{ learnedText }}
+    </button>
+  </div>
+
+  <div class="learned-skills">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
+      @if (showLearned) {
         @for (itskill of skills; track $index) {
-            <app-skill-card [name]="itskill.name" [description]="itskill.description" [icon]="itskill.icon" [usageMedia]="itskill.usageMedia" />
+          @if (itskill.learning) {
+            <app-skill-card [name]="itskill.name" [description]="itskill.description" [icon]="itskill.icon"
+                            [usageMedia]="itskill.usageMedia" />
+          }
         }
+      } @else {
+        @for (itskill of skills; track $index) {
+          @if (!itskill.learning) {
+            <app-skill-card [name]="itskill.name" [description]="itskill.description" [icon]="itskill.icon"
+                            [usageMedia]="itskill.usageMedia" />
+          }
+        }
+      }
     </div>
+  </div>
 </div>

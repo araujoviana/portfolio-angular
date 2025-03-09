@@ -1,12 +1,12 @@
-<div class="card-border p-1 bg-gray-800 rounded-lg">
-  <div class=" p-6 bg-black rounded-lg ">
+<div class="card-border p-1 bg-gray-800 rounded-lg mt-3 flex flex-col h-full">
+  <div class="p-6 bg-black rounded-lg flex flex-col h-full">
     <div class="flex items-center">
       <img [ngSrc]="icon" width="50" height="50" alt="Skill icon" class="w-10 h-10" priority/>
       <h3 class="ml-4 text-xl font-semibold text-white">{{ name }}</h3>
     </div>
-    <div class="mt-4">
+    <div class="mt-4 flex flex-col flex-1">
       <p class="text-white">{{ description }}</p>
-      <div class="mt-4 image-container">
+      <div class="mt-4 image-container flex-1 flex flex-col justify-center items-center min-h-0">
         <img [ngSrc]="usageMedia" width="640" height="480" alt="Usage media" class="max-w-full h-auto rounded cursor-zoom-in" (click)="zoomImage()" />
       </div>
     </div>

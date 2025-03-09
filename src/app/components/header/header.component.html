@@ -1,8 +1,8 @@
-<header class="header-blur text-white shadow-lg fixed top-0 left-0 w-full z-50 pb-18">
-  <div class="main-header container mx-auto px-4 py-4 flex justify-center items-center">
+<header class="header-blur text-white shadow-lg fixed top-0 left-0 w-full z-50 pb-16">
+  <div class="main-header  container mx-auto px-4 py-4 flex justify-center items-center">
     <a routerLink="" class="items-center text-2xl font-bold mr-8 hover:text-gray-200 transition">Portfolio</a>
 
-    <nav class="hidden md:flex space-x-6 border-2 border-gray-300 rounded-full px-6 py-2">
+    <nav class="hidden md:flex space-x-6 border-2 border-gray-300 rounded-full px-6 py-1">
       <a routerLink="about" class="hover:text-gray-200 transition">About Me</a>
       <a routerLink="skills" class="hover:text-gray-200 transition">Skills</a>
       <a routerLink="projects" class="hover:text-gray-200 transition">Projects</a>
@@ -18,8 +18,8 @@
 
   </div>
 
-
-  <div class="drawer-menu container mx-auto flex left-0 items-center bg-black w-full border-b border-b-white rounded-lg pb-2" [class.show]="drawerVisible">
+<!-- Blur não se aplica nesse drawer??? -->
+  <div class="drawer-menu container mx-auto flex left-0 items-center bg-black  w-full border border-b-white rounded-lg pb-2 backdrop-blur-md mt-5" [class.show]="drawerVisible">
     <nav class="space-x-6 px-6 py-2 grid gap-3.5">
       <a routerLink="about" (click)="toggleDrawer()" class="hover:text-gray-200 transition">About Me</a>
       <a routerLink="skills" (click)="toggleDrawer()" class="hover:text-gray-200 transition">Skills</a>
