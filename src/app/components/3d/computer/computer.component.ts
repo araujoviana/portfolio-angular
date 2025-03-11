@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { Vector2 } from 'three';
 
 interface GLTF {
@@ -82,7 +82,7 @@ export class ComputerComponent implements AfterViewInit {
     });
 
     const loader = new GLTFLoader();
-    loader.load(this.computerPath, (gltf: GLTF) => {
+    loader.load(this.computerPath, (gltf) => {
       this.model = gltf.scene;
 
       const modelScale = 0.03;
