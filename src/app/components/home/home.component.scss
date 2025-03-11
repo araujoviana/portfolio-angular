@@ -1,0 +1,17 @@
+.shining-text {
+  background: linear-gradient(90deg, #2a4d69, #70a1d7, #ffffff, #70a1d7, #2a4d69);
+  background-size: 300% auto;
+  color: #222;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 300% center;
+  }
+}
+
